@@ -219,7 +219,7 @@ You can have some control of the files from inside your Configuration file by us
             collection_files:
               - file: config/Movies.yml
                 schedule: weekly(friday)
-              - default: actors
+              - default: actor
                 schedule: weekly(saturday)
         playlist_files:
           - file: config/Playlists.yml
@@ -256,7 +256,7 @@ You can have some control of the files from inside your Configuration file by us
             collection_files:
               - file: config/Movies.yml
                 asset_directory: <path_to_assets>/Movies
-              - default: actors
+              - default: actor
                 asset_directory: <path_to_assets>/people
             overlay_files:
               - default: imdb
