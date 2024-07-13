@@ -1,0 +1,51 @@
+##############################################################################
+#                        DE Content Rating Overlay                           #
+#                 Created by Yozora, Bullmoose20, & Sohjiro                  #
+#          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
+# https://metamanager.wiki/en/latest/defaults/overlays/content_rating_uk.html#
+##############################################################################
+
+external_templates:
+  pmm: templates
+  template_variables:
+    default:
+      key: <<overlay_name>>
+    horizontal_offset: 15
+    horizontal_align: left
+    vertical_offset: 360
+    vertical_align: bottom
+    conditionals:
+      pmm:
+        conditions:
+          - file.exists: false
+            file_<<key>>.exists: false
+            url.exists: false
+            url_<<key>>.exists: false
+            git.exists: false
+            git_<<key>>.exists: false
+            repo.exists: false
+            repo_<<key>>.exists: false
+            value: <<overlay_name>>
+
+templates:
+  cr_de:
+    ignore_blank_results: true
+    plex_all: true
+    filters:
+      - channels: <<key>>
+
+overlays:
+  Mono:
+    template:
+      - name: standard
+      - {name: cr_de, key: 1}
+
+  Stereo:
+    template:
+      - name: standard
+      - {name: cr_de, key: 2}
+
+  Dolby:
+    template:
+      - name: standard
+      - {name: cr_de, key: 6}
