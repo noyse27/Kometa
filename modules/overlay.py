@@ -42,7 +42,7 @@ rating_sources = [
     "trakt_user_rating"
 ]
 float_vars = ["audience_rating", "critic_rating", "user_rating"] + rating_sources
-int_vars = ["runtime", "total_runtime", "season_number", "episode_number", "episode_count", "versions"]
+int_vars = ["runtime", "total_runtime", "total_runtime_unseen","season_number", "episode_number", "episode_count", "versions"]
 date_vars = ["originally_available"]
 types_for_var = {
     "movie_show_season_episode_artist_album": ["runtime", "user_rating", "title"],
@@ -62,9 +62,7 @@ types_for_var = {
         "imdb_rating", "mdb_average_rating", "mdb_imdb_rating", "mdb_letterboxd_rating",
         "mdb_metacritic_rating", "mdb_metacriticuser_rating", "mdb_rating",
         "mdb_tmdb_rating", "mdb_tomatoes_rating", "mdb_tomatoesaudience_rating",
-        "mdb_trakt_rating", "mdb_myanimelist_rating", "omdb_rating", "omdb_imdb_rating", "tmdb_rating",
-        "omdb_metascore_rating", "omdb_tomatoes_rating", "plex_imdb_rating", "plex_tmdb_rating",
-        "plex_tomatoes_rating", "plex_tomatoesaudience_rating", "trakt_rating",
+        "mdb_trakt_rating", "mdb_myanimelist_rating", "omdb_rating", "tmdb_rating"
     ],
     "movie_show_season": ["original_title", "trakt_user_rating"],
     "show_season_artist_album": ["total_runtime"],
@@ -81,6 +79,7 @@ var_mods = {
     "originally_available": ["", "["],
     "runtime": ["", "H", "M"],
     "total_runtime": ["", "H", "M"],
+    "total_runtime_unseen": ["", "H", "M"],
 }
 for mod in float_vars:
     var_mods[mod] = ["", "%", "#", "/"]
