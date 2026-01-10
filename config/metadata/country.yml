@@ -358,7 +358,12 @@ overlays:
       - { name: landover, country: "Puerto Rico" }
       - { name: standard, country: "Puerto Rico", weight: 149, text: PR, key: pr }
 
-   Taiwan, Province of China:
+   "Taiwan, Province of China":
      template:
       - { name: landover, country: "Taiwan, Province of China" }
       - { name: standard, country: "Taiwan, Province of China", weight: 151, text: TW, key: tw }
+
+   Philippines:
+     template:
+       - { name: landover, country: "Philippines" }
+       - { name: standard, country: "Philippines", weight: 152, text: PH, key: ph }
