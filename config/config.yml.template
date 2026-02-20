@@ -8,7 +8,7 @@ plex:                              # Can be individually specified per library a
   url: http://192.168.1.12:32400   # Enter Plex URL (REQUIRED); this needs to point to your server, not app.plex.tv
   token:                           # Enter Plex Token (REQUIRED)
   timeout: 60
-  db_cache: 40
+  db_cache: 8192 40
   clean_bundles: false
   empty_trash: false
   optimize: false
